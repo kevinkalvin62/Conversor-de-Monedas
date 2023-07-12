@@ -1,48 +1,50 @@
 
 public class seleccionaPrimerMoneda  {
-	public void escogerMoneda(String seleccionDeMoneda, double cantidadIngresada) {
-		String TipoMoneda = seleccionDeMoneda;
-		 double primerMoneda;
-		 double cantidad,resultado;
-			Scanner entrada= new Scanner(System.in);
+	String TipoMoneda ;
+	String segundaMoneda;
+	 double primerMoneda;
+	 double cantidad,resultado;
+	public void escogerMoneda(String seleccionDeMoneda,String SegundaSeleccion,double cantidadIngresada) {
+		TipoMoneda = seleccionDeMoneda;
+		 segundaMoneda=SegundaSeleccion;
 			valorMonedas monedas= new valorMonedas();
-			//System.out.println("escoja la moneda a convertir,\n peso \n dolar \n libra \n yan \n wonj");
-			TipoMoneda= entrada.next();
 			switch (TipoMoneda) {
 			case "peso":
-				//System.out.println("escoja a que moneda va convertir, \n dolar \n libra \n yan \n wonj");
-				TipoMoneda= entrada.next();
-				primerMoneda=monedas.getPeso(TipoMoneda);
-				//System.out.println("cuantos pesos desea convertir?");
-				cantidad=entrada.nextDouble();
-				resultado= cantidad/primerMoneda;
-				//System.out.println(resultado);
+				primerMoneda=monedas.getPeso(segundaMoneda);
+				cantidad=cantidadIngresada;
+				//resultado= cantidad/primerMoneda;
+				resultado= setResultados(cantidad,primerMoneda);
 				break;
 			case "dolar":
-				TipoMoneda= entrada.next();
-				primerMoneda=monedas.getDolar(TipoMoneda);
-				cantidad=entrada.nextDouble();
-				resultado= cantidad* primerMoneda;
+				primerMoneda=monedas.getDolar(segundaMoneda);
+				cantidad=cantidadIngresada;
+				resultado= setResultados(cantidad,primerMoneda);
 				break;
 			case "libra":
-				TipoMoneda= entrada.next();
-				primerMoneda=monedas.getLibra(TipoMoneda);
-				cantidad=entrada.nextDouble();
-				resultado= cantidad* primerMoneda;
+				primerMoneda=monedas.getLibra(segundaMoneda);
+				cantidad=cantidadIngresada;
+				resultado= setResultados(cantidad,primerMoneda);
 				break;
 			case "yan":
-				TipoMoneda= entrada.next();
-				primerMoneda=monedas.getYan(TipoMoneda);
-				cantidad=entrada.nextDouble();
-				resultado= cantidad* primerMoneda;
+				primerMoneda=monedas.getYan(segundaMoneda);
+				cantidad=cantidadIngresada;
+				resultado= setResultados(cantidad,primerMoneda);
 				break;
 			case "wonj":
-				TipoMoneda= entrada.next();
-				primerMoneda=monedas.getWonj(TipoMoneda);
-				cantidad=entrada.nextDouble();
-				resultado= cantidad* primerMoneda;
+				resultado= primerMoneda=monedas.getWonj(segundaMoneda);
+				cantidad=cantidadIngresada;
+				setResultados(cantidad,primerMoneda);
 				break;
 			}
 	}
+	public double setResultados(double laCantidad, double moneda) {
+		double getCantidad= laCantidad;
+		double getMoneda= moneda;
+		return getCantidad / getMoneda;
+	}
+	public double getResultados() {
+		return resultado; 
+	}
+	
 	
 }

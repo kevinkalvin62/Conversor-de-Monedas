@@ -20,7 +20,7 @@ public class valorMonedas {
 			peso= 100;
 			 return peso;
 		}
-		return peso;
+		return peso=1;
 	}
 	public double getDolar(String moneda) {
 		switch (moneda) {
@@ -37,7 +37,7 @@ public class valorMonedas {
 			dolar= 10;
 			 return dolar;
 		}
-		return dolar;
+		return dolar=1;
 	}
 	public double getLibra(String moneda) {
 		switch (moneda) {
@@ -54,7 +54,7 @@ public class valorMonedas {
 			libra= 10;
 			 return libra;
 		}
-		return libra;
+		return libra=1;
 	}
 	public double getYan(String moneda) {
 		switch (moneda) {
@@ -71,7 +71,7 @@ public class valorMonedas {
 			yan= 10;
 			 return yan;
 		}
-		return yan;
+		return yan=1;
 	}
 	public double getWonj(String moneda) {
 		switch (moneda) {
@@ -88,6 +88,6 @@ public class valorMonedas {
 			wonj= 10;
 			 return wonj;
 		}
-		return wonj;
+		return wonj=1;
 	}
 }
