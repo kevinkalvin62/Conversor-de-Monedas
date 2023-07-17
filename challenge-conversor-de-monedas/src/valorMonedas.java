@@ -1,93 +1,98 @@
 
 public class valorMonedas {
-	private  double peso ;
-	private  double dolar;
-	private  double libra;
-	private  double yan;
-	private  double wonj;
+	private double peso;
+	private double dolar;
+	private double libra;
+	private double yan;
+	private double wonj;
+
 	public double getPeso(String moneda) {
 		switch (moneda) {
 		case "dolar":
-			peso= 17.2;
-			 return peso;
+			peso = 17.2;
+			return peso;
 		case "libra":
-			peso= 22.01;
-			 return peso;
+			peso = 22.01;
+			return peso;
 		case "yan":
-			peso= 0.12;
-			 return peso;
+			peso = 0.12;
+			return peso;
 		case "wonj":
-			peso= 100;
-			 return peso;
+			peso = 100;
+			return peso;
 		}
-		return peso=1;
+		return peso = 1;
 	}
+
 	public double getDolar(String moneda) {
 		switch (moneda) {
 		case "peso":
-			dolar= 17.5;
-			 return dolar;
+			dolar = 0.059;
+			return dolar;
 		case "libra":
-			dolar= 1.28;
-			 return dolar;
+			dolar = 1.28;
+			return dolar;
 		case "yan":
-			dolar= 15.5;
-			 return dolar;
+			dolar = 15.5;
+			return dolar;
 		case "wonj":
-			dolar= 10;
-			 return dolar;
+			dolar = 10;
+			return dolar;
 		}
-		return dolar=1;
+		return dolar = 1;
 	}
+
 	public double getLibra(String moneda) {
 		switch (moneda) {
 		case "peso":
-			libra= 17.5;
-			 return libra;
+			libra = 21.93;
+			return libra;
 		case "dolar":
-			libra= 20;
-			 return libra;
+			libra = 1.30;
+			return libra;
 		case "yan":
-			libra= 15.5;
-			 return libra;
+			libra = 9.31;
+			return libra;
 		case "wonj":
-			libra= 10;
-			 return libra;
+			libra = 1658;
+			return libra;
 		}
-		return libra=1;
+		return libra = 1;
 	}
+
 	public double getYan(String moneda) {
 		switch (moneda) {
 		case "peso":
-			yan= 17.5;
-			 return yan;
+			yan = 2.36;
+			return yan;
 		case "dolar":
-			yan= 20;
-			 return yan;
+			yan = 0.14;
+			return yan;
 		case "libra":
-			yan= 15.5;
-			 return yan;
+			yan = 0.11;
+			return yan;
 		case "wonj":
-			yan= 10;
-			 return yan;
+			yan = 178;
+			return yan;
 		}
-		return yan=1;
+		return yan = 1;
 	}
+
 	public double getWonj(String moneda) {
 		switch (moneda) {
 		case "peso":
-			wonj= 17.5;
-			 return wonj;
+			wonj = 17.5;
+			return wonj;
 		case "dolar":
-			wonj= 20;
-			 return wonj;
+			wonj = 20;
+			return wonj;
 		case "libra":
-			wonj= 15.5;
-			 return wonj;
+			wonj = 15.5;
+			return wonj;
 		case "yan":
-			wonj= 10;
-			 return wonj;
+			wonj = 10;
+			return wonj;
 		}
-		return wonj=1;
+		return wonj = 1;
 	}
 }
